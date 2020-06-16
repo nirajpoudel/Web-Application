@@ -1,0 +1,20 @@
+{% extends 'testCRUD/base.html' %}
+
+{% block content %}
+
+
+<fieldset><legend>Add Student</legend>
+   <a href="#">Back</a>
+   <form method="POST" action="{% url 'editstudent' id=edit_student_data.id %}">
+       {% csrf_token %}
+       <table><tr>
+           <td> Name </td><td>:</td><td><input type="text" value="{{ edit_student_data.name }}" /></td></tr>
+           <tr> <td>Age </td><td>:</td><td><input type="text" value="{{ edit_student_data.age }}" /></td></tr>
+           <tr><td> Address </td><td>:</td><td><input type="text" value="{{ edit_student_data.address }}" /></td></tr>
+           <tr><td> email </td><td>:</td><td><input type="text" value="{{ edit_student_data.email }}" /></td></tr>
+           <tr><td> Remarks </td><td>:</td><td><input type="text" value="{{ edit_student_data.remark }}" /></td></tr>
+           <tr><td colspan="3"> <input type="submit" value="Update"></td></tr>
+       </table>
+   </form>
+       </fieldset>
+{% endblock %}

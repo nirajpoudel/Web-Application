@@ -1,0 +1,26 @@
+{% extends 'testCRUD/base.html' %}
+
+{% block content %}
+<fieldset><legend>List Student</legend>
+             <table border="1">
+         <tr>
+             <th>username</th>
+             <th>age</th>
+             <th>adress</th>
+             <th>email</th>
+             <th>remarks</th>
+             <th>Action</th>
+         </tr>
+         {% for student in get_student_data %}
+         <tr>
+         <td>{{ student.name }} </td>
+         <td>{{ student.age }}</td>
+         <td>{{ student.address }}</td>
+         <td>{{ student.email }}</td>
+         <td>{{ student.remark }}</td>
+         <td><a href="{% url 'updatestudent' student.id %}" > Edit</a> |<a href="{% url 'deletestudent' student.id %}" onclick='return confirm("Do you Want To Delete")'>Delete</a></td>
+         </tr>
+         {% endfor %}
+       </table>
+</fieldset>
+{% endblock %}

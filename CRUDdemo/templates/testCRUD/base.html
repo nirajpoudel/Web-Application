@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html>
+<head>
+  <title>Student Management System</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" type="text/css" href="{%static "css/style.css" %}">
+</head>
+<body onload="">
+  <div id="wrapper">
+    <div id="header">
+      <div class="left_logo">
+          <img src="{%static "images/DITLogo.png" %}" height="100" width="100" style="margin: 10px;"/>
+      </div>
+      <div class="right_heading">
+          <h1 style="padding-top: 20px;">Welcome DIT Solution Pvt. Ltd.</h1>
+      </div>
+    </div>
+    <div id="menu">
+      <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'users' %}">Users</a>
+        <a href="{% url 'addstudent' %}">Add Student</a>
+        <a href="{% url 'student' %}">Students Detail</a>
+          <a href="{% url 'news' %}">News</a>
+    </div>
+    <div id="content">
+      {% block content %} {% endblock %}
+    </div>
+    <br/>
+    <div id="footer">
+      <span class="footer-link">
+        &COPY;DIT Solution
+      </span>
+    </div>
+  </div>
+</body>
+</html>
