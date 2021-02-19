@@ -8,14 +8,20 @@
   <div class="col-5">
     <img src="{% static 'portfolio/niraj.jpg' %}" class="img-fluid">
   </div>
+
 </div>
 
-<div class="row justify-content-center mb-3">
+
+<br>
+
+ <div class="row justify-content-center mb-3">
   <div class="col-md-9 text-center">
     <h1 id="hometext" class="font-weight-bold">Niraj Poudel</h1>
+    <p>A second year Computer science undergraduate student at Patan College for Professional studies affiliated to University of Bedfordshire with an interest in data science, machine learning, deep learning and Artificial Intelligence.</p>
   </div>
 </div>
-<br>
+
+
 
 <h1 class="mt-5">Projects</h1>
 <hr>
@@ -36,9 +42,17 @@
 
   </div>
   {% endfor %}
+
+
 </div>
 
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-icon="https://storage.googleapis.com/cloudprod-apiai/c1f81264-21ba-4e31-aa85-76a5882f7050_x.png"
+  intent="WELCOME"
+  chat-title="Niraj"
+  agent-id="92e7519c-4cce-45d2-9220-d1c1cc6b64d0"
+  language-code="en"
+></df-messenger>
+</div>
 {% endblock %}
-
-
-
